@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="yast的个人博客 - 记录生活与成长">
+  <title>yast的小窝</title>
+  <link rel="icon" type="image/jpeg" href="https://i1.hdslb.com/bfs/face/b85002dc46770c364d85dfcedc5d3bef9d83d01c.jpg@240w_240h_1c_1s_!web-avatar-nav.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/posts.css">
+  <link rel="stylesheet" href="css/pagination.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-brand">
+        <div class="avatar">
+          <img src="https://i1.hdslb.com/bfs/face/b85002dc46770c364d85dfcedc5d3bef9d83d01c.jpg@240w_240h_1c_1s_!web-avatar-nav.webp" alt="yast">
+        </div>
+        <span>yast</span>
+      </a>
+      
+      <ul class="navbar-nav">
+        <li><a href="#" class="nav-link active">首页</a></li>
+        <li><a href="#archives" class="nav-link">归档</a></li>
+        <li><a href="#about" class="nav-link">关于</a></li>
+        <li><a href="#friends" class="nav-link">友链</a></li>
+      </ul>
+      
+      <div class="navbar-actions">
+        <button class="navbar-btn" data-action="open-search" aria-label="搜索">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+        </button>
+        <button class="navbar-btn" data-action="toggle-theme" aria-label="切换主题">
+          <span class="icon theme-icon"></span>
+        </button>
+        <button class="navbar-btn" data-action="toggle-layout" aria-label="切换布局">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </span>
+        </button>
+        <button class="navbar-btn navbar-toggle" aria-label="菜单">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <aside class="sidebar-overlay"></aside>
+  
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-section">
+        <div class="profile-card">
+          <div class="profile-avatar">
+            <img src="https://i1.hdslb.com/bfs/face/b85002dc46770c364d85dfcedc5d3bef9d83d01c.jpg@240w_240h_1c_1s_!web-avatar-nav.webp" alt="头像">
+          </div>
+          <h3 class="profile-name">yast</h3>
+          <p class="profile-bio">热爱生活的普通人，喜欢记录日常与成长</p>
+          <div class="profile-stats">
+            <div class="profile-stat">
+              <span class="profile-stat-value">30</span>
+              <span class="profile-stat-label">文章</span>
+            </div>
+            <div class="profile-stat">
+              <span class="profile-stat-value">5</span>
+              <span class="profile-stat-label">分类</span>
+            </div>
+            <div class="profile-stat">
+              <span class="profile-stat-value">22</span>
+              <span class="profile-stat-label">标签</span>
+            </div>
+          </div>
+          <div class="social-links" style="margin-top: 16px;">
+            <a href="https://github.com" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </span>
+            </a>
+            <a href="https://space.bilibili.com/" class="social-link" target="_blank" rel="noopener" aria-label="B站">
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.659.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906zM5.333 7.24c-.746.018-1.373.276-1.88.773-.506.498-.769 1.13-.786 1.894v7.52c.017.764.28 1.395.786 1.893.507.498 1.134.756 1.88.773h13.334c.746-.017 1.373-.275 1.88-.773.506-.498.769-1.129.786-1.893v-7.52c-.017-.765-.28-1.396-.786-1.894-.507-.497-1.134-.755-1.88-.773zM8 11.107c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c0-.373.129-.689.386-.947.258-.257.574-.386.947-.386zm8 0c.373 0 .684.124.933.373.25.249.383.569.4.96v1.173c-.017.391-.15.711-.4.96-.249.25-.56.374-.933.374s-.684-.125-.933-.374c-.25-.249-.383-.569-.4-.96V12.44c.017-.391.15-.711.4-.96.249-.249.56-.373.933-.373z"/>
+                </svg>
+              </span>
+            </a>
+            <a href="mailto:xiaomo2024@coze.email" class="social-link" target="_blank" rel="noopener" aria-label="邮箱">
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+            </a>
+            <a href="https://discord.com/" class="social-link" target="_blank" rel="noopener" aria-label="Discord">
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <div class="announcement">
+          <button class="announcement-close" aria-label="关闭">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+              </svg>
+            </span>
+          </button>
+          <h4 class="announcement-title">欢迎来访</h4>
+          <p class="announcement-content">感谢你来到我的小窝，希望你能在这里找到喜欢的内容。</p>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3 class="sidebar-section-title">
+          分类
+        </h3>
+        <div class="category-list"></div>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3 class="sidebar-section-title">
+          标签
+        </h3>
+        <div class="tag-cloud"></div>
+      </div>
+    </div>
+  </aside>
+  
+  <button class="sidebar-toggle" aria-label="侧边栏">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </span>
+  </button>
+  
+  <main class="main-content">
+    <section class="banner">
+      <div class="banner-slides"></div>
+      <button class="banner-arrow prev" aria-label="上一张">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </span>
+      </button>
+      <button class="banner-arrow next" aria-label="下一张">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </span>
+      </button>
+      <div class="banner-dots"></div>
+      <div class="banner-wave">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path fill="var(--bg-primary)" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,58.7C960,64,1056,64,1152,58.7C1248,53,1344,43,1392,37.3L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path>
+        </svg>
+      </div>
+    </section>
+    
+    <div class="content-wrapper">
+      <div class="content-header">
+        <h1 class="content-title">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </span>
+          所有文章
+          <span></span>
+        </h1>
+        <div class="filter-info"></div>
+      </div>
+      
+      <div class="inline-search">
+        <span class="inline-search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input type="text" class="inline-search-input" id="inline-search-input" placeholder="搜索文章...">
+        <button class="inline-search-clear" id="inline-search-clear" aria-label="清除" style="display:none;">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      
+      <div class="posts-grid"></div>
+      
+      <nav class="pagination"></nav>
+    </div>
+    
+    <section id="archives" class="page-section" style="display:none;">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+            </span>
+            文章归档
+          </h2>
+        </div>
+        <div class="archive-list"></div>
+      </div>
+    </section>
+    
+    <section id="about" class="page-section" style="display:none;">
+      <div class="section-container">
+        <div class="about-page-content">
+          <div class="about-page-avatar">
+            <img src="https://i1.hdslb.com/bfs/face/b85002dc46770c364d85dfcedc5d3bef9d83d01c.jpg@240w_240h_1c_1s_!web-avatar-nav.webp" alt="头像">
+          </div>
+          <h2 class="about-page-name">yast</h2>
+          <p class="about-page-bio">一个热爱生活、喜欢记录日常的普通人</p>
+          
+          <div class="about-page-section">
+            <h3>
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              </span>
+              个人介绍
+            </h3>
+            <p>你好呀，欢迎来到我的小窝！我是一个热爱生活的普通人，喜欢记录日常的点点滴滴。在这里你会看到我分享的技术心得、生活感悟，还有我收藏的一些有趣的东西。希望你能在这里找到喜欢的内容。</p>
+          </div>
+          
+          <div class="about-page-section">
+            <h3>
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16,18 22,12 16,6"/><polyline points="8,6 2,12 8,18"/></svg>
+              </span>
+              技能展示
+            </h3>
+            <div class="skills-grid">
+              <div class="skill-item">
+                <span class="skill-name">前端开发</span>
+                <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar"><div class="skill-progress" style="width:90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">CSS/UI设计</span>
+                <div class="skill-bar"><div class="skill-progress" style="width:80%"></div></div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">React/Vue</span>
+                <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-page-section">
+            <h3>
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </span>
+              兴趣爱好
+            </h3>
+            <div class="hobbies-list">
+              <span class="hobby-tag">动漫</span>
+              <span class="hobby-tag">编程</span>
+              <span class="hobby-tag">设计</span>
+              <span class="hobby-tag">阅读</span>
+              <span class="hobby-tag">音乐</span>
+              <span class="hobby-tag">游戏</span>
+            </div>
+          </div>
+          
+          <div class="about-page-section">
+            <h3>
+              <span class="icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </span>
+              联系方式
+            </h3>
+            <div class="contact-list">
+              <a href="https://github.com" target="_blank" rel="noopener" class="contact-item">
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></span>
+                GitHub
+              </a>
+              <a href="https://space.bilibili.com/" target="_blank" rel="noopener" class="contact-item">
+                <span class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.659.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .653.124.92.373L9.653 4.44c.071.071.134.142.187.213h4.267a.836.836 0 0 1 .16-.213l2.853-2.747c.267-.249.573-.373.92-.373.347 0 .662.151.929.4.267.249.391.551.391.907 0 .355-.124.657-.373.906z"/></svg></span>
+                Bilibili
+              </a>
+              <a href="mailto:xiaomo2024@coze.email" class="contact-item">
+                <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                邮箱
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="friends" class="page-section" style="display:none;">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </span>
+            友情链接
+          </h2>
+        </div>
+        <div class="friends-list">
+          <div class="friend-card">
+            <div class="friend-avatar">
+              <img src="https://i1.hdslb.com/bfs/face/b85002dc46770c364d85dfcedc5d3bef9d83d01c.jpg@240w_240h_1c_1s_!web-avatar-nav.webp" alt="头像">
+            </div>
+            <div class="friend-info">
+              <h4 class="friend-name">yast的小窝</h4>
+              <p class="friend-desc">记录生活与成长</p>
+              <a href="#" class="friend-link" target="_blank" rel="noopener">访问博客</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-main">
+        <div class="footer-section">
+          <h4>关于我</h4>
+          <p>一个热爱生活、喜欢记录日常的普通人。在这里分享技术心得、生活感悟和兴趣爱好。</p>
+        </div>
+        <div class="footer-section">
+          <h4>快速链接</h4>
+          <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#archives">归档</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#friends">友链</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2024 <a href="#">yast</a>. 用心记录每一天
+        </p>
+        <div class="footer-badge">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          </span>
+          Made with Coze
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <button class="scroll-to-top" aria-label="返回顶部">
+    <span class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </span>
+  </button>
+  
+  <div class="modal-overlay search-modal">
+    <div class="search-container">
+      <div class="search-header">
+        <span class="search-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <input type="text" class="search-input" placeholder="搜索文章...">
+        <button class="search-clear search-modal-close" aria-label="关闭">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"/>
+              <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="search-body">
+        <div class="search-results">
+          <div class="search-empty">
+            <span class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </span>
+            <h4>搜索文章</h4>
+            <p>输入关键词来查找文章</p>
+          </div>
+        </div>
+      </div>
+      <div class="search-footer">
+        <div class="search-shortcuts">
+          <span class="search-shortcut"><kbd>Enter</kbd> 选择</span>
+          <span class="search-shortcut"><kbd>Esc</kbd> 关闭</span>
+        </div>
+        <div class="search-stats"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal-overlay"></div>
+  
+  <nav class="mobile-tab-bar">
+    <div class="tab-bar-inner">
+      <a href="#" class="tab-item active">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9,22 9,12 15,12 15,22"/>
+          </svg>
+        </span>
+        <span>首页</span>
+      </a>
+      <button class="tab-item" data-action="open-search">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <span>搜索</span>
+      </button>
+      <button class="tab-item" data-action="toggle-layout">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+        </span>
+        <span>布局</span>
+      </button>
+      <button class="tab-item" data-action="toggle-theme">
+        <span class="icon theme-icon"></span>
+        <span>主题</span>
+      </button>
+      <a href="#about" class="tab-item">
+        <span class="icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </span>
+        <span>关于</span>
+      </a>
+    </div>
+  </nav>
+  
+  <script src="js/data.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/banner.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/posts.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
